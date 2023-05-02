@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    background-color: white;
+    font-size: 微软雅黑;
+}
+
+li a {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    width: 135px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(167, 206, 107);
+}
+/* 农产品侧边栏 */
+#chebianlan {
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+#color {
+    color: #666;
+}
+.a1 {
+    display: block;
+    width: 234px;
+    height: 42px;
+    background-color: #fff;
+    font: 10px;
+    color: rgb(157, 209, 138);
+    text-decoration: none;
+    text-indent: 2em;
+    text-decoration: none;
+    /* 文字的行高等于盒子的高度 就可以让文字垂直居中 */
+    line-height: 42px;
+    float: left;
+    margin-top: 20px;
+}
+.a2 a:hover {
+   background-color: #ff6700;
+}
+li a {
+    color: #fff;
+}
+/* 轮播图 */
+/* 精品推荐模块 */
+.a3 {
+    margin-left: 50px;
+    float: left;
+}
+h2 {
+    font-family: 楷体;
+    color: #fff;
+    font-weight: normal;
+    background-color: #ec6e47;
+    width: 200px;
+    font-size: 30px;
+    text-align: center;
+    height: 45px;
+    text-align: left;
+    line-height: 45px;
+    /* text-indent: 2em; */
+    margin: 40px 0 0 50px;
+}
+/* 越写越乱，烦 */
+#news {
+    width: 980px;
+    margin: 0 auto;
+    margin: 0 auto;
+    background: url(./images/dongtai.jpg) no-repeat;
+    height: 300px;
+    width: 100%;
+    padding-top: 120px;
+    margin-top: 20px;
+}
+h4 {
+    line-height: 50px;
+    border-bottom: 1px solid #999;
+    width: 224px;
+    padding-left: 10px;
+    color: rgb(79, 48, 48);
+}
+.font {
+    padding-left: 10px;
+    font-size: 20px;
+    color: rgb(248, 0, 0);
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #999;
+    width: 224px;
+}
+.news1 {
+    /* background: url(./images/yinying.jpg) no-repeat; */
+    height: 40px;
+    width: 224px;
+}
+h1 {
+    font-family: 楷体;
+    color: rgb(198, 51, 38);
+    font-weight: normal;
+    background-color: #fff;
+    width: 259px;
+    font-size: 20px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+}
+/* 页脚模块 */
+.btn {
+    background: url(/images5/btn.jpg) no-repeat right center;
+    height: 80px;
+    width: 400px ;
+    border: none;
+}
+#ft {
+    background: #5bf78f;
+    width: 100%;
+    columns: #fff;
+    text-align: center;
+    line-height: 30px;
+    height: 100px;
+    padding-top: 40px;
+}
+#yejiao {
+    text-align: center;
+}
+.footer-links {
+    width: 100%;
+    height: 192px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.a5 {
+    font-size: 20px;
+}
+.a6 {
+    font-size: 28px;
+}
+/* 浮动 */
+#fu {
+    right: 1%;
+    bottom: 5%;
+    position: fixed;   
+    /* fixed 是固定的 */
+}

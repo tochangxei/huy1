@@ -1,0 +1,111 @@
+.wrapa{
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.list {
+    width: 800px;
+    height: 400px;
+    list-style: none;
+    /* 叠加 */
+    position: relative;
+   
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 50px;
+    /* 叠加 */
+    position: absolute;
+    /* 透明度 */
+    opacity: 0;
+    /* 动态效果 */
+    transition: all .8s;
+}
+
+.item:nth-child(1) {
+    background-color: black;
+}
+
+.item:nth-child(2) {
+    background-color: rgb(154, 31, 31);
+}
+
+.item:nth-child(3) {
+    background-color: rgb(27, 53, 96);
+}
+
+.item:nth-child(4) {
+    background-color: rgb(91, 10, 101);
+}
+
+.item:nth-child(5) {
+    background-color: rgb(19, 172, 32);
+}
+
+.btn {
+    width: 20px;
+    height: 40px;    
+    top: 170px;   
+    z-index:10;
+    position: absolute;
+}
+
+#gopre {
+    left: 0px;
+}
+
+#gonext {
+    right: 0px;
+}
+
+.item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.pointlist {
+    padding-left: 0px;
+    list-style: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.point {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 100%;
+    float: left;
+    margin-right: 14px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.point.active {
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.a {
+    background-color: black;
+    width: 800px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: 370px;
+    margin-top: -14px;
+}
+/* 过度模块 */
+.guodu {
+    font-size: 66px;
+    color: #bbbb;
+}

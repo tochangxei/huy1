@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>我要买菜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Transit Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<link rel="stylesheet" href="css/lightbox.css">
+<link rel="stylesheet" href="css/sinake.css" type="text/css">
+<link rel="stylesheet" href="css/1.css" type="text/css">
+<script src="js/jquery-1.11.1.min.js"> </script>	
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>		
+</head>
+<body>
+	<div class="banner a-banner">
+		<!-- container -->
+		<div class="container">
+			<div class="header">
+				<div class="logo">
+					<a href="index.html">果言蔬语</a>
+				</div>
+				<div class="icons">
+					<ul>
+						<li><a href="#" class="facebook"> </a></li>
+						<li><a href="#" class="facebook twitter"> </a></li>
+						<li><a href="#" class="facebook chrome"> </a></li>
+						<li><a href="#" class="facebook dribbble"> </a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="top-nav">
+					<span class="menu">菜单</span>
+					<ul class="nav1">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="history.html" class="active">我要买菜</a></li>
+						<li><a href="gs.html">公司战略</a></li>
+						<li><a href="food.html">健康美食</a></li>
+						<li><a href="tell.html">疫情专区</a></li>
+						
+					</ul>
+					<!-- script-for-menu -->
+						<script>
+							 $( "span.menu" ).click(function() {
+							$( "ul.nav1" ).slideToggle( 300, function() {
+							// Animation complete.
+								});
+								});
+						</script>
+					<!-- /script-for-menu -->
+			</div>
+		</div>
+		<!-- //container -->
+	</div>	
+	<!-- //banner -->
+	<!-- about -->
+	<!-- about-top -->
+		<!-- banner -->
+		<div id="chebianlan">
+			<!-- 产品侧边栏 -->
+		<ul class="a1">
+			<li class="a2"><a href="#" id="color">热点推荐</a></li>
+			<li class="a2" ><a href="#" id="color">新鲜蔬菜</a></li>
+			<li class="a2" ><a href="#" id="color">有机蔬菜</a></li>
+			<li class="a2" ><a href="#" id="color">菌菇干货</a></li>
+			<li class="a2" ><a href="#" id="color">健康杂粮</a></li>
+			<li class="a2" ><a href="#" id="color">新鲜肉类</a></li>
+			<li class="a2" ><a href="#" id="color">淡水产品</a></li>
+			<!-- <li class="a2" ><a href="#" id="color">特价抢购</a></li> -->
+		</ul>
+	</div>
+		<!-- 轮播图 -->
+	<div class="wrapa">
+		<ul class="list">
+			<li class="item active "><img src="images/dzx.webp" width="900px" height="400px"></li>
+			<li class="item ">
+			<img src="images/su.jpg" width="900px" height="400px"></a>
+			</li>
+			<li class="item "><img src="images/cy.webp" width="900px" height="400px"></li>
+			<li class="item "><img src="images/dm.webp" width="900px"  height="400px"></li>
+			<li class="item "><img src="images/gs.webp" width="900px" height="400px"></li>
+			</ul>
+			<ul class="pointlist">
+					<li class="point active" data-index='0'></li>
+					<li class="point" data-index='1'></li>
+					<li class="point" data-index='2'></li>
+					<li class="point" data-index='3'></li>
+					<li class="point" data-index='4'></li>
+				</ul>
+				<button type="button" class="btn" id="gopre"> < </button>
+				<button type="button" class="btn" id="gonext"> > </button>
+			</div>
+			<script type="text/javascript">
+				var items = document.getElementsByClassName('item');
+				// 获取按钮
+				var goprebtn = document.getElementById('gopre');
+				var gonextbtn = document.getElementById('gonext');
+				var points = document.getElementsByClassName('point');
+		
+				var time = 0;
+		
+				var index = 0;
+		
+				var clearActive = function() {
+					for (var i = 0; i < items.length; i++) {
+						items[i].className = 'item';
+					}
+					for (var i = 0; i < points.length; i++) {
+						points[i].className = 'point';
+					}
+				}
+		
+				var goIndex = function() {
+					clearActive();
+					console.log(index)
+					points[index].className = 'point active';
+					items[index].className = 'item active';
+				}
+		
+				var gonext = function() {
+					if (index < 4) {
+						index++;
+					} else {
+						index = 0;
+					}
+		
+					goIndex();
+				}
+		
+				var gopre = function() {
+					if (index == 0) {
+						index = 4;
+					} else {
+						index--;
+					}
+					goIndex();
+				}
+		
+				gonextbtn.addEventListener('click', function() {
+					gonext();
+				})
+				goprebtn.addEventListener('click', function() {
+					gopre();
+				})
+				for (var i = 0; i < points.length; i++) {
+					points[i].addEventListener('click', function() {
+						var pointIndex = this.getAttribute('data-index');
+						index = pointIndex;
+						goIndex();
+						time = 0;
+					})
+		
+				}
+		
+		
+				setInterval(function() {
+					time++;
+					if (time == 20) {
+						gonext();
+						time = 0;
+					}
+				}, 100)
+			</script>
+		</div>
+	</div>
+	<!-- 精选模块 -->
+	<div class="nav">
+		<h2> 今日上新 </h2>
+		<div class="a3">
+            <a href="https://uland.taobao.com/coupon/edetail?spm=a2e1u.19484427.29996460.1.46b11cabzSINSS&e=DxsT%2BqdW2wgNfLV8niU3R40dlhWtfp96Ng4Gqf8CT4BnmB%2Fzds2ljaVP%2BS7WW%2ByLMKhGmazNz1EcmibAw061sO8tGDNVgeMFEanO2Awg2XbaQZfOVeBfE0WGClwZLWrNQvb8yqsoVUdHhQbS3qDYyd44h1GaxmfXX1OuudbifUQifcaHclw2r81rh%2B4QgJsp%2FzrmtpFY67E%3D&app_pvid=59590_33.8.146.180_692_1652181316784&ptl=floorId%3A34371%3Bapp_pvid%3A59590_33.8.146.180_692_1652181316784%3Btpp_pvid%3A100_11.14.200.174_209014_6241652181316796222&union_lens=lensId%3AOPT%401652181317%40210892b4_080b_180adae35a7_6af1%4001%3Brecoveryid%3A201_33.8.42.130_3002238_1652181300543%3Bprepvid%3A201_33.7.35.158_3002512_1652181316457&pid=mm_1791370113_2287350417_111464550176"><img src="images/qc.webp" alt=""/></a>
+            <h4>一级大青菜</h4>
+            <P class="font">现价 ￥41.5</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/dc.webp" alt=""/>
+            <h4>正宗大葱</h4>
+            <P class="font">现价 ￥25.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/gg.webp" alt=""/>
+            <h4>新鲜葛根</h4>
+            <P class="font">现价 ￥27.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/lj.webp"alt=""/>
+            <h4>辣妹子辣椒</h4>
+            <P class="font">现价 ￥46.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/kg.webp" alt=""/>
+            <h4>苦瓜</h4>
+            <P class="font">现价 ￥5.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/mls.webp" alt=""/>
+            <h4>马铃薯</h4>
+            <P class="font">现价 ￥25.8</P>
+            <p class="news1"></p>
+        </div>       
+        <div class="a3">
+            <img src="images/nr.webp" alt=""/>
+            <h4>牛肉</h4>
+            <P class="font">现价 ￥38.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/np.webp" alt=""/>
+            <h4>牛排</h4>
+            <P class="font">现价 ￥159</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/wnq.webp" alt=""/>
+            <h4>万年青</h4>
+            <P class="font">现价 ￥14.5</P>
+            <p class="news1"></p>
+        </div>        <div class="a3">
+            <img src="images/sng.webp" alt=""/>
+            <h4>圣女果</h4>
+            <P class="font">现价 ￥26.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/xtd.webp" alt=""/>
+            <h4>小甜豆</h4>
+            <P class="font">现价 ￥52.9</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/xhg.webp" alt=""/>
+            <h4>小黄瓜</h4>
+            <P class="font">现价 ￥9.6</P>
+            <p class="news1"></p>
+        </div>        <div class="a3">
+            <img src="images/basyu.webp" alt=""/>
+            <h4>巴沙鱼</h4>
+            <P class="font">现价 ￥75</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/wcj.webp" alt=""/>
+            <h4>五彩椒</h4>
+            <P class="font">现价 ￥13.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/lniyu.webp" alt=""/>
+            <h4>龙利鱼</h4>
+            <P class="font">现价 ￥99</P>
+            <p class="news1"></p>
+        </div>        <div class="a3">
+            <img src="images/scsl.webp" alt=""/>
+            <h4>蔬菜沙拉</h4>
+            <P class="font">现价 ￥18.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <a href="http://yys.wlqjiaoyu.cn/yybd02pc1/?yybd02pc-pc-zonghe-20211012-1060&bd_vid=10698125247699783349"><img src="images/yjm.webp" alt=""/></a>
+            <h4>羊角蜜</h4>
+            <P class="font">现价 ￥22.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/tswj.webp" alt=""/>
+            <h4>脱水莴苣</h4>
+            <P class="font">现价 ￥32.9</P>
+            <p class="news1"></p>
+        </div>        <div class="a3">
+            <img src="images/xhs.webp" alt=""/>
+            <h4>西红柿</h4>
+            <P class="font">现价 ￥19.8</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/luyu.webp" alt=""/>
+            <h4>鲈鱼</h4>
+            <P class="font">现价 ￥39</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/xmd.webp" alt=""/>
+            <h4>鲜毛豆</h4>
+            <P class="font">现价 ￥24.8</P>
+            <p class="news1"></p>
+        </div>        
+        <div class="a3">
+            <img src="images/sgym.webp" alt=""/>
+            <h4>水果玉米</h4>
+            <P class="font">现价 ￥14.9</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/whr.webp" alt=""/>
+            <h4>五花肉</h4>
+            <P class="font">现价 ￥129</P>
+            <p class="news1"></p>
+        </div>
+        <div class="a3">
+            <img src="images/ztztz.webp" alt=""/>
+            <h4>猪蹄子</h4>
+            <P class="font">现价 ￥108</P>
+            <p class="news1"></p>
+        </div>
+		<div class="a3">
+            <img src="images/tshlb.webp" alt=""/>
+            <h4>脱水胡萝卜</h4>
+            <P class="font">现价 ￥25</P>
+            <p class="news1"></p>
+        </div>
+		
+	</div>
+<br><br><br><br><br><br>
+	<div class="footer">
+		<!-- container -->
+		<div class="container">
+			<div class="col-md-6 footer-left">
+				<h3>联系我们</h3>
+				<form>
+					<input type="text" placeholder="电子邮件,例如cuiyuands@163.com" required="">
+					<input type="submit" value="提交">
+				</form>
+			</div>
+			<div class="col-md-3 footer-middle">
+				<h3>地址</h3>
+				<div class="address">
+					<p>安徽省合肥市
+						<span>庐阳区</span>
+					</p>
+				</div>
+				<div class="phone">
+					<p>86-18315577705</p>
+				</div>
+			</div>   
+			<div class="col-md-3 footer-right">
+				<div class="f-logo">
+					<a href="index.html">萃源鲜生</a>
+				</div>
+				<p>安徽省合肥市庐阳区</p>
+			</div>
+			<div class="clearfix"> </div>	
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copyright">
+		<!-- container -->
+		<div class="container">
+			<div class="copyright-left">
+				<p>Copyright &copy; 2022.All rights reserved.&nbsp;-JMX-designed&nbsp;for<a href="index.html" target="_blank" title="">果言蔬语</a></p>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- copyright -->
+</body>
+</html>
